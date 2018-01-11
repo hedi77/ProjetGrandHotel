@@ -12,7 +12,7 @@ namespace GrandHotel
     public class GrandHotelContext : DbContext
     {
 
-        //public DbSet<Client> Clients { get; set; }
+        public DbSet<Client> Clients { get; set; }
         //public static IList<string> GetPaysFournisseurs()
         //{
         //    var list = new List<string>();
@@ -36,17 +36,24 @@ namespace GrandHotel
         //    }
         //    return list;
         //}
-        /*
+
         public IList<Client> GetClients()
         {
             Clients.Load();
 
             return Clients.Local;
-        }*/
+
+        }
+        
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+        }
+
+        public GrandHotelContext() : base("GrandHotel.Settings1.GrandHotelChaineConnexion")
+        {
+
         }
 
 

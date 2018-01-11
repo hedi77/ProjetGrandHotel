@@ -26,6 +26,17 @@ namespace GrandHotel
             }
         }
 
+        public static GrandHotelContext DataContext
+        {
+            get
+            {
+                if (_dataContext == null)
+                    _dataContext = new GrandHotelContext();     // Contexte1()
+
+                return _dataContext;
+            }
+        }
+
 
         // Constructeur
         public GrandHotelApp()

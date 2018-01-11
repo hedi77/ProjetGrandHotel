@@ -22,10 +22,10 @@ namespace GrandHotel.Pages
 
         private void AfficherListeClients()
         {
-            /*
+
             IList<Client> listeClients = GrandHotelApp.DataContext.GetClients();
             ConsoleTable.From(listeClients, "Liste des Clients").Display("Liste des Clients");
-            */
+            
 
         }
 

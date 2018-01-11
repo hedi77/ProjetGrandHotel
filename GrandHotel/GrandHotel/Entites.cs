@@ -15,4 +15,20 @@ namespace GrandHotel
     //    public bool CarteFidelite { get; set; }
     //    public string Societe { get; set; }
     //}
+    public class Facture
+    {
+        public int FactureId { get; set; }
+        public int IdClient { get; set; }
+        public DateTime DateFacture { get; set; }
+        public DateTime DatePaiement { get; set; }
+        public string CodeModePaiement { get; set; }
+
+        public virtual List<LigneFacture> LigneFactures { get;set }
+
+    }
+
+    public class LigneFacture
+    {
+
+    }
 }

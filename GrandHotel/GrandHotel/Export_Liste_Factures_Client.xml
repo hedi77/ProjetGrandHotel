@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Client>
+	<Facture Id="1" Montant="249,000" />
+	<Facture Id="2" Montant="217,200" />
+	<Facture Id="3" Montant="186,000" />
+	<Facture Id="4" Montant="149,600" />
+	<Facture Id="5" Montant="124,000" />
+	<Facture Id="6" Montant="381,200" />
+	<Facture Id="7" Montant="302,000" />
+	<Facture Id="8" Montant="219,600" />
+	<Facture Id="9" Montant="216,000" />
+	<Facture Id="10" Montant="137,600" />
+	<Facture Id="11" Montant="62,000" />
+	<Facture Id="12" Montant="292,000" />
+	<Facture Id="13" Montant="162,000" />
+	<Facture Id="14" Montant="130,400" />
+	<Facture Id="15" Montant="232,000" />
+	<Facture Id="16" Montant="144,800" />
+	<Facture Id="17" Montant="134,600" />
+	<Facture Id="18" Montant="154,000" />
+	<Facture Id="19" Montant="362,000" />
+	<Facture Id="20" Montant="353,000" />
+	<Facture Id="21" Montant="333,200" />
+	<Facture Id="22" Montant="172,000" />
+	<Facture Id="23" Montant="381,800" />
+	<Facture Id="24" Montant="246,000" />
+</Client>

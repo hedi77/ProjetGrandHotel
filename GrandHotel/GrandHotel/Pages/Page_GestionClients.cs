@@ -20,9 +20,10 @@ namespace GrandHotel.Pages
             Menu.AddOption("4", "Ajouter un numéro de téléphone Client ou un email Client.", AjouterTelephoneOuEmail);
             Menu.AddOption("5", "Supprimer un Client.", SupprimerClient);
             Menu.AddOption("6", "Exporter la liste des Clients.", ExporterListeClient);
+            Menu.AddOption("7", "Retour à la page d'Accueil.", () => GrandHotelApp.Instance.NavigateTo(typeof(PageAccueil)));
         }
 
-        private void AfficherListeClients()
+        public void AfficherListeClients()
         {
             _listeClients = GrandHotelApp.DataContext.GetClients();
             ConsoleTable.From(_listeClients, "Liste des Clients").Display("Liste des Clients");
@@ -211,8 +212,8 @@ namespace GrandHotel.Pages
         {
             // Récupération de la liste des Clients depuis la BDD
             _listeClients = GrandHotelApp.DataContext.GetClients();
-            Console.WriteLine("Sérialisation en XML avec XMLWriter");
             GrandHotelApp.DataContext.ExporterXml_XmlWriter(_listeClients);
+            Output.WriteLine(ConsoleColor.Green, "Sérialisation de la liste des clients avec coordonnées dans le dossier GrandHotel");
         }
 
     }

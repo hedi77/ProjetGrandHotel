@@ -20,6 +20,8 @@ namespace GrandHotel
         public DbSet<Email> Emails { get; set; }
         public DbSet<Adresse> Adresses { get; set; }
 
+        #region page client
+
         public IList<Client> GetClients()
         {
             return Clients.AsNoTracking().ToList();
@@ -82,19 +84,8 @@ namespace GrandHotel
                 SaveChanges();
             }
 
-
-        //        cmd.Connection = cnx;
-        //        cnx.Open();
-
         }
-        
-        //Retourne la liste des factures d'un client à partir d'une date donnée(par défault sur un an glissant)
-        public IList<Facture> GetFacture(int idClient,DateTime date)
-        {
-            DateTime dateMax = date.AddMonths(12);         
-            var factures = Factures.Where(f => f.IdClient == idClient && f.DateFacture >= date && f.DateFacture <= dateMax  ).ToList();
-            return factures;
-        }
+
         public void ExporterXml_XmlWriter(IEnumerable<Client> listeclient)
         {
             // paramètres pour l'indentation du flux xml généré
@@ -121,13 +112,6 @@ namespace GrandHotel
                     writer.WriteAttributeString("tel", cli.Telephones.Select(t => t.Numero).FirstOrDefault());
                     writer.WriteAttributeString("mail", cli.Emails.Select(em => em.Adresse).FirstOrDefault());
                     writer.WriteEndElement();
-        public IList<LigneFacture> LigneFacture(int idFacture)
-        {
-
-            var ligne = LignesFactures.Where(l => l.IdFacture == idFacture).ToList();
-            return ligne;
-        }
-
 
                     writer.WriteEndElement();
                 }
@@ -137,37 +121,111 @@ namespace GrandHotel
             }
         }
 
+        #endregion
+
+        #region Facture
+        //Retourne la liste des factures d'un client à partir d'une date donnée(par défault sur un an glissant)
+        public IList<Facture> GetFactureClient(int idClient,DateTime date)
+        {
+            DateTime dateMax = date.AddMonths(12);         
+            var factures = Factures.Where(f => f.IdClient == idClient && f.DateFacture >= date && f.DateFacture <= dateMax  ).ToList();
+            return factures;
+        }
+
+        //Retourne la liste des factures d'un client à partir d'une date donnée(par défault sur un an glissant)
+        public IList<Facture> GetFactureClient(int idClient)
+        {
+            var factures = Factures.Where(f => f.IdClient == idClient).ToList();
+            return factures;
+        }
+
+        // charge toutes les factures (et lignes) et retourne le nombre de factures
+        public List<Facture> GetToutesFactures()
+        {
+            return Factures.ToList();
+        }
+        public IList<LigneFacture> LigneFacture(int idFacture)
+        {
+
+            var ligne = LignesFactures.Where(l => l.IdFacture == idFacture).ToList();
+            return ligne;
+        }
+        // ajout d'une facture
+        public void AddFacture(Facture fact)
+        {
+            Factures.Add(fact);
+            SaveChanges();
+        }
+        // ajout de lignes de facture
+        public void AddLigneDeCommande(LigneFacture ligneFact)
+        {
+            LignesFactures.Add(ligneFact);
+            SaveChanges();
+        }
+
+        //Modifie Paiement et Date facture existante
+        public void UpdateFacture(Facture fact)
+        {
+            var facture = Factures.Find(fact.Id);
+            facture.DatePaiement = fact.DatePaiement;
+            facture.CodeModePaiement = fact.CodeModePaiement;
+            SaveChanges();
+        }
+
+        public void ExporterXml_Factures_XmlWriter(IEnumerable<Facture> listefactclient)
+        {
+            // paramètres pour l'indentation du flux xml généré
+            XmlWriterSettings settings = new XmlWriterSettings();
+            settings.Indent = true;
+            settings.IndentChars = "\t";
+            decimal resultMontant =0;
+            using (XmlWriter writer = XmlWriter.Create(@"..\..\Export_Liste_Factures_Client.xml", settings))
+            {
+                writer.WriteStartDocument();
+                writer.WriteStartElement("Client");
+
+                // On parcourt la liste des clients triés par id
+                foreach (Facture fact in listefactclient.OrderBy(lf => lf.Id))
+                {
+                    writer.WriteStartElement("Facture");
+
+                    writer.WriteAttributeString("Id", fact.Id.ToString());
+                    var montant = fact.LigneFactures.Select(lf => lf.MontantHT).ToList();
+                    foreach (var m in montant)
+                        resultMontant += m;
+
+                    writer.WriteAttributeString("Montant", resultMontant.ToString());
+                    resultMontant = 0;
+
+                    writer.WriteEndElement();
+                }
+                writer.WriteEndElement();
+                // Ecriture de la balise fermante de l'élément racine et fin du document
+                writer.WriteEndDocument();
+            }
+        }
+
+//retourne une facture 
+//public Facture GetFacture(int numFacture)
+//{
+//    Facture fact = Factures.Where(f => f.Id == numFacture).FirstOrDefault();
+//    return fact;
+//}
+
+#endregion
 
 
-
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
-
         public GrandHotelContext() : base("GrandHotel.Settings1.GrandHotelChaineConnexion")
         {
 
         }
-
-        public void AddFacture(Facture fact)
-        {
-            Factures.Add(fact);
-        }
-        
-
-        public void AddLigneDeCommande(LigneFacture ligneFact)
-        {
-            LignesFactures.Add(ligneFact);
-        }
-        public Facture GetFacture(int numFacture)
-        {
-            Facture fact = Factures.Where(f => f.Id == numFacture).FirstOrDefault();
-            return fact;
-        }
-        //public int EnregistrerModif()
-        //{
-        //    return SaveChanges();
-        //}
     }
 }
+
+
+ 
+

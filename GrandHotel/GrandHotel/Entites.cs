@@ -5,85 +5,52 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Xml.Serialization;
 
 namespace GrandHotel
 {
     public class Client
     {
-        [XmlAttribute]
         public int Id { get; set; }
-        [XmlText]
         public string Civilite { get; set; }
-        [XmlText]
         public string Nom { get; set; }
-        [XmlIgnore]
         public string Prenom { get; set; }
-        [XmlIgnore]
         public bool CarteFidelite { get; set; }
-        [XmlIgnore]
         public string Societe { get; set; }
+      //  [Display(ShortName ="none")]
+        public virtual List<Facture> ListeFactures { get; set; }
 
-        [XmlIgnore]
-        [Display(ShortName = "None")]
-        public virtual List<Telephone> Telephones { get; set; }
-        [XmlIgnore]
-        [Display(ShortName = "None")]
-        public virtual List<Email> Emails { get; set; }
-        [XmlIgnore]
-        [Display(ShortName = "None")]
-        public virtual Adresse Adresse { get; set; }
-    }
 
-    public class Telephone
-    {
-        [Key]
-        [XmlText]
-        public string Numero { get; set; }
-        [ForeignKey("Client")]
-        [XmlIgnore]
-        public int IdClient { get; set; }
-        [XmlIgnore]
-        public string CodeType { get; set; }
-        [XmlIgnore]
-        public bool Pro { get; set; }
-        [XmlIgnore]
-        [Display(ShortName = "None")]
-        public virtual Client Client { get; set; }
     }
-    
-    public class Email
+    public class Facture
     {
-        [Key]
-        [XmlText]
-        public string Adresse { get; set; }
-        [XmlIgnore]
-        public bool Pro { get; set; }
-        [XmlIgnore]
+        
+        public int Id { get; set; }
         [ForeignKey("Client")]
         public int IdClient { get; set; }
-        [XmlIgnore]
-        [Display(ShortName = "None")]
+        public DateTime DateFacture { get; set; }
+        public DateTime DatePaiement { get; set; }
+        [StringLength (3)]
+        public string CodeModePaiement { get; set; }
+
+        [Display(ShortName = "none")]
+        public virtual List<LigneFacture> LigneFactures { get; set; }
+        [Display(ShortName = "none")]
         public virtual Client Client { get; set; }
+
     }
 
-    public class Adresse
+    public class LigneFacture
     {
-        [Key, ForeignKey("Client")]
-        [XmlIgnore]
-        public int IdClient { get; set; }
-        [XmlText]
-        public string Rue { get; set; }
-        [XmlText]
-        public string Complement { get; set; }
-        [XmlText]
-        public string CodePostal { get; set; }
-        [XmlText]
-        public string Ville { get; set; }
-        [XmlIgnore]
-        [Display(ShortName = "None")]
-        public virtual Client Client { get; set; }
+        [ForeignKey("Facture")]
+        public int IdFacture { get; set; }
+        [Key]
+        public int NumLigne { get; set; }
+        public short Quantite { get; set; }
+        public Decimal MontantHT { get; set; }
+        public Decimal TauxTVA { get; set; }
+        public Decimal TauxReduction { get; set; }
+
+        [Display(ShortName = "none")]
+        public virtual Facture Facture { get; set; }
     }
-
-
 }

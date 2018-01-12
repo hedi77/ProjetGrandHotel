@@ -14,6 +14,8 @@ namespace GrandHotel
     {
 
         public DbSet<Client> Clients { get; set; }
+        public DbSet<Facture> Factures { get; set; }
+        public DbSet<LigneFacture> LignesFactures { get; set; }
         public DbSet<Telephone> Telephones { get; set; }
         public DbSet<Email> Emails { get; set; }
         public DbSet<Adresse> Adresses { get; set; }
@@ -81,8 +83,18 @@ namespace GrandHotel
             }
 
 
-        }
+        //        cmd.Connection = cnx;
+        //        cnx.Open();
 
+        }
+        
+        //Retourne la liste des factures d'un client à partir d'une date donnée(par défault sur un an glissant)
+        public IList<Facture> GetFacture(int idClient,DateTime date)
+        {
+            DateTime dateMax = date.AddMonths(12);         
+            var factures = Factures.Where(f => f.IdClient == idClient && f.DateFacture >= date && f.DateFacture <= dateMax  ).ToList();
+            return factures;
+        }
         public void ExporterXml_XmlWriter(IEnumerable<Client> listeclient)
         {
             // paramètres pour l'indentation du flux xml généré
@@ -109,6 +121,12 @@ namespace GrandHotel
                     writer.WriteAttributeString("tel", cli.Telephones.Select(t => t.Numero).FirstOrDefault());
                     writer.WriteAttributeString("mail", cli.Emails.Select(em => em.Adresse).FirstOrDefault());
                     writer.WriteEndElement();
+        public IList<LigneFacture> LigneFacture(int idFacture)
+        {
+
+            var ligne = LignesFactures.Where(l => l.IdFacture == idFacture).ToList();
+            return ligne;
+        }
 
 
                     writer.WriteEndElement();
@@ -132,6 +150,24 @@ namespace GrandHotel
 
         }
 
+        public void AddFacture(Facture fact)
+        {
+            Factures.Add(fact);
+        }
+        
 
+        public void AddLigneDeCommande(LigneFacture ligneFact)
+        {
+            LignesFactures.Add(ligneFact);
+        }
+        public Facture GetFacture(int numFacture)
+        {
+            Facture fact = Factures.Where(f => f.Id == numFacture).FirstOrDefault();
+            return fact;
+        }
+        //public int EnregistrerModif()
+        //{
+        //    return SaveChanges();
+        //}
     }
 }

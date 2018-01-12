@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ListedeClients>
+	<Client Id="1" Civilite="M" Nom="DUPONT">
+		<Contact tel="0144285252" mail="alain.dupont@orange.fr" />
+	</Client>
+	<Client Id="2" Civilite="M" Nom="MARTIN">
+		<Contact tel="0147662929" mail="mmartin@transports_martin_fils.fr" />
+	</Client>
+	<Client Id="3" Civilite="M" Nom="BOUVIER">
+		<Contact tel="0494411727" mail="" />
+	</Client>
+	<Client Id="4" Civilite="M" Nom="DUBOIS">
+		<Contact tel="0241588952" mail="" />
+	</Client>
+	<Client Id="5" Civilite="M" Nom="DREYFUS">
+		<Contact tel="0151585250" mail="pdreyfus@free.fr" />
+	</Client>
+	<Client Id="6" Civilite="M" Nom="FAURE">
+		<Contact tel="0145351919" mail="" />
+	</Client>
+	<Client Id="7" Civilite="M" Nom="LACOMBE">
+		<Contact tel="0148798799" mail="rantanplan@sfr.com" />
+	</Client>
+	<Client Id="8" Civilite="Mlle" Nom="DUHAMEL">
+		<Contact tel="0154114321" mail="" />
+	</Client>
+	<Client Id="9" Civilite="Mme" Nom="BOYER">
+		<Contact tel="0139889039" mail="martine.boyer@cabinet.boyer.fr" />
+	</Client>
+	<Client Id="10" Civilite="M" Nom="MARTIN">
+		<Contact tel="0148989221" mail="" />
+	</Client>
+	<Client Id="11" Civilite="M" Nom="PAUL">
+		<Contact tel="0158985256" mail="" />
+	</Client>
+	<Client Id="12" Civilite="M" Nom="DUVAL">
+		<Contact tel="0148045424" mail="aduval@free.fr" />
+	</Client>
+	<Client Id="13" Civilite="M" Nom="PHILIPPE">
+		<Contact tel="0144858787" mail="" />
+	</Client>
+	<Client Id="14" Civilite="M" Nom="PIERRELAYE">
+		<Contact tel="0144050005" mail="" />
+	</Client>
+	<Client Id="15" Civilite="Mlle" Nom="DAUMIER">
+		<Contact tel="0148286346" mail="" />
+	</Client>
+	<Client Id="16" Civilite="M" Nom="CHABAUD">
+		<Contact tel="0135987562" mail="" />
+	</Client>
+	<Client Id="17" Civilite="M" Nom="BAILLY">
+		<Contact tel="0149957896" mail="" />
+	</Client>
+	<Client Id="18" Civilite="M" Nom="FAYOLLE">
+		<Contact tel="0142373462" mail="" />
+	</Client>
+	<Client Id="19" Civilite="M" Nom="COCINO">
+		<Contact tel="0493881515" mail="gcocinom@pacwan.azur.fr" />
+	</Client>
+	<Client Id="20" Civilite="M" Nom="FRANQUINET">
+		<Contact tel="0164549897" mail="" />
+	</Client>
+	<Client Id="21" Civilite="M" Nom="MALATERRE">
+		<Contact tel="0490821226" mail="sofalis@orange.fr" />
+	</Client>
+	<Client Id="22" Civilite="M" Nom="MEDARD">
+		<Contact tel="0596633430" mail="" />
+	</Client>
+	<Client Id="23" Civilite="M" Nom="AUZENAT">
+		<Contact tel="0468518609" mail="" />
+	</Client>
+	<Client Id="24" Civilite="M" Nom="CHTCHEPINE">
+		<Contact tel="0466670500" mail="" />
+	</Client>
+	<Client Id="25" Civilite="M" Nom="LE GUILLARD">
+		<Contact tel="0142774800" mail="" />
+	</Client>
+	<Client Id="26" Civilite="M" Nom="GARREAU">
+		<Contact tel="0134666282" mail="" />
+	</Client>
+	<Client Id="27" Civilite="M" Nom="LECUYER">
+		<Contact tel="0476638383" mail="cozet@infonie.fr" />
+	</Client>
+	<Client Id="28" Civilite="M" Nom="PRA-LETTRY">
+		<Contact tel="0466531781" mail="epralettrym@hotmail.com" />
+	</Client>
+	<Client Id="29" Civilite="M" Nom="SILLET">
+		<Contact tel="0296705074" mail="" />
+	</Client>
+	<Client Id="30" Civilite="M" Nom="TROLLAT">
+		<Contact tel="0142892525" mail="herve.trollat@bouygues.fr" />
+	</Client>
+	<Client Id="31" Civilite="M" Nom="BOUCHET">
+		<Contact tel="0169215768" mail="" />
+	</Client>
+	<Client Id="32" Civilite="M" Nom="LEBAILLIF">
+		<Contact tel="0170697542" mail="jpfparis@free.fr" />
+	</Client>
+	<Client Id="33" Civilite="M" Nom="DU HAUT CILLY">
+		<Contact tel="0472711639" mail="" />
+	</Client>
+	<Client Id="34" Civilite="Mme" Nom="GALLACIER">
+		<Contact tel="0494387544" mail="" />
+	</Client>
+	<Client Id="35" Civilite="M" Nom="PICOT">
+		<Contact tel="0467040730" mail="alain.gardeur@orange.fr" />
+	</Client>
+	<Client Id="36" Civilite="M" Nom="BEAUNEE">
+		<Contact tel="0143024044" mail="" />
+	</Client>
+	<Client Id="37" Civilite="M" Nom="VERNET">
+		<Contact tel="0144241140" mail="maison-immobilier@icare.fr" />
+	</Client>
+	<Client Id="38" Civilite="M" Nom="ALBERT">
+		<Contact tel="0476700758" mail="" />
+	</Client>
+	<Client Id="39" Civilite="Mme" Nom="HESS">
+		<Contact tel="0321817167" mail="" />
+	</Client>
+	<Client Id="40" Civilite="M" Nom="CHATON">
+		<Contact tel="0549883393" mail="" />
+	</Client>
+	<Client Id="41" Civilite="M" Nom="PLATONOFF">
+		<Contact tel="0144545474" mail="stonesandsun@mnet.fr" />
+	</Client>
+	<Client Id="42" Civilite="Mme" Nom="LETERRIER">
+		<Contact tel="0493757660" mail="" />
+	</Client>
+	<Client Id="43" Civilite="M" Nom="MONTEIL">
+		<Contact tel="0494680766" mail="" />
+	</Client>
+	<Client Id="44" Civilite="M" Nom="SPITHAKIS">
+		<Contact tel="0494564427" mail="terrains31@sfr.com" />
+	</Client>
+	<Client Id="45" Civilite="M" Nom="ORELL">
+		<Contact tel="0143212939" mail="property@cybercom.fr" />
+	</Client>
+	<Client Id="46" Civilite="Mme" Nom="MARTINET">
+		<Contact tel="0494964488" mail="" />
+	</Client>
+	<Client Id="47" Civilite="M" Nom="RAY">
+		<Contact tel="0326826161" mail="" />
+	</Client>
+	<Client Id="48" Civilite="M" Nom="TARSAC">
+		<Contact tel="0467587700" mail="ydern@free.fr" />
+	</Client>
+	<Client Id="49" Civilite="M" Nom="COULOMB">
+		<Contact tel="0147046666" mail="" />
+	</Client>
+	<Client Id="50" Civilite="M" Nom="SAVY">
+		<Contact tel="0237317250" mail="" />
+	</Client>
+	<Client Id="51" Civilite="Mme" Nom="DAVID">
+		<Contact tel="0145512222" mail="" />
+	</Client>
+	<Client Id="52" Civilite="M" Nom="FORGEOT">
+		<Contact tel="0143217575" mail="prodom@allia-com.fr" />
+	</Client>
+	<Client Id="53" Civilite="M" Nom="BERGER">
+		<Contact tel="0479853825" mail="poquet@alpes-net.fr" />
+	</Client>
+	<Client Id="54" Civilite="M" Nom="DOUBLET">
+		<Contact tel="0140301515" mail="" />
+	</Client>
+	<Client Id="55" Civilite="M" Nom="MATHIEU">
+		<Contact tel="0146051144" mail="athos2@msn.com" />
+	</Client>
+	<Client Id="56" Civilite="Mme" Nom="MOURGUES">
+		<Contact tel="0145265994" mail="" />
+	</Client>
+	<Client Id="57" Civilite="M" Nom="PIERROT">
+		<Contact tel="0145976531" mail="stif@meteor.avo.net" />
+	</Client>
+	<Client Id="58" Civilite="M" Nom="FRANQUEBALME">
+		<Contact tel="0146226655" mail="" />
+	</Client>
+	<Client Id="59" Civilite="Mme" Nom="ZAMPIERO">
+		<Contact tel="0142025447" mail="euro-prospect@calva.net" />
+	</Client>
+	<Client Id="60" Civilite="M" Nom="PASCOT">
+		<Contact tel="0143672626" mail="" />
+	</Client>
+	<Client Id="61" Civilite="M" Nom="MECHRI">
+		<Contact tel="0144158744" mail="acces.immobilier@orange.fr" />
+	</Client>
+	<Client Id="62" Civilite="M" Nom="THIERY">
+		<Contact tel="0146407367" mail="" />
+	</Client>
+	<Client Id="63" Civilite="Mme" Nom="ROURE">
+		<Contact tel="0142502317" mail="webmaster@immo-mb.fr" />
+	</Client>
+	<Client Id="64" Civilite="M" Nom="VILLE">
+		<Contact tel="0491938472" mail="jpville@laposte.net" />
+	</Client>
+	<Client Id="65" Civilite="M" Nom="NOCENTINI">
+		<Contact tel="0153689999" mail="joussely@free.fr" />
+	</Client>
+	<Client Id="66" Civilite="M" Nom="LAYANI">
+		<Contact tel="0149539550" mail="" />
+	</Client>
+	<Client Id="67" Civilite="M" Nom="RECHUL">
+		<Contact tel="0147009132" mail="marcimmo@ebc.net" />
+	</Client>
+	<Client Id="68" Civilite="Mme" Nom="DE CONINCK">
+		<Contact tel="0561218308" mail="" />
+	</Client>
+	<Client Id="69" Civilite="M" Nom="LEI">
+		<Contact tel="0467493090" mail="cmi@virtualaccess.net" />
+	</Client>
+	<Client Id="70" Civilite="M" Nom="MICHEL">
+		<Contact tel="0467493949" mail="" />
+	</Client>
+	<Client Id="71" Civilite="M" Nom="BOURA">
+		<Contact tel="0499652254" mail="" />
+	</Client>
+	<Client Id="72" Civilite="M" Nom="CARDONA">
+		<Contact tel="0323960603" mail="" />
+	</Client>
+	<Client Id="73" Civilite="M" Nom="THOMASSE">
+		<Contact tel="0556577196" mail="dgtb@hotmail.com" />
+	</Client>
+	<Client Id="74" Civilite="Mme" Nom="MOURIES">
+		<Contact tel="0492131120" mail="" />
+	</Client>
+	<Client Id="75" Civilite="M" Nom="MARTIN">
+		<Contact tel="0556350221" mail="elfio@dugudu.fr" />
+	</Client>
+	<Client Id="76" Civilite="M" Nom="BENZAQUI">
+		<Contact tel="0142279610" mail="" />
+	</Client>
+	<Client Id="77" Civilite="M" Nom="ROUSSILLON">
+		<Contact tel="0147494994" mail="" />
+	</Client>
+	<Client Id="78" Civilite="M" Nom="FARGETTON">
+		<Contact tel="0321715111" mail="dpr@magousta.com" />
+	</Client>
+	<Client Id="79" Civilite="M" Nom="LEPERCQ">
+		<Contact tel="0494960461" mail="alain.forqueville@calva.com" />
+	</Client>
+	<Client Id="80" Civilite="M" Nom="OLIVIA">
+		<Contact tel="0491256225" mail="" />
+	</Client>
+	<Client Id="81" Civilite="M" Nom="CASTAREDE">
+		<Contact tel="0492101300" mail="" />
+	</Client>
+	<Client Id="82" Civilite="M" Nom="LEOTARD">
+		<Contact tel="0145003121" mail="adji@nolan.fr" />
+	</Client>
+	<Client Id="83" Civilite="Mme" Nom="LALANDE">
+		<Contact tel="0298446371" mail="" />
+	</Client>
+	<Client Id="84" Civilite="M" Nom="BAVEREL">
+		<Contact tel="0146590537" mail="" />
+	</Client>
+	<Client Id="85" Civilite="M" Nom="NOEL">
+		<Contact tel="0387636713" mail="" />
+	</Client>
+	<Client Id="86" Civilite="M" Nom="THIRIOT">
+		<Contact tel="0145559515" mail="" />
+	</Client>
+	<Client Id="87" Civilite="M" Nom="BERTRAND">
+		<Contact tel="0492433514" mail="" />
+	</Client>
+	<Client Id="88" Civilite="M" Nom="BACQUE">
+		<Contact tel="0468043349" mail="" />
+	</Client>
+	<Client Id="89" Civilite="M" Nom="COUASSE">
+		<Contact tel="0557771222" mail="herbert@wise.fr" />
+	</Client>
+	<Client Id="90" Civilite="M" Nom="JOLY">
+		<Contact tel="0493672626" mail="" />
+	</Client>
+	<Client Id="91" Civilite="M" Nom="BENATTAR">
+		<Contact tel="0493961547" mail="" />
+	</Client>
+	<Client Id="92" Civilite="Mme" Nom="PARIS">
+		<Contact tel="0492707769" mail="" />
+	</Client>
+	<Client Id="93" Civilite="Mme" Nom="LEAL">
+		<Contact tel="0494656667" mail="" />
+	</Client>
+	<Client Id="94" Civilite="M" Nom="BENATTAR">
+		<Contact tel="0490964203" mail="" />
+	</Client>
+	<Client Id="95" Civilite="M" Nom="AIACH">
+		<Contact tel="0491525152" mail="djin@telecom.fr" />
+	</Client>
+	<Client Id="96" Civilite="M" Nom="GAL">
+		<Contact tel="0490781068" mail="" />
+	</Client>
+	<Client Id="97" Civilite="Mme" Nom="CHAMBON">
+		<Contact tel="0559035409" mail="" />
+	</Client>
+	<Client Id="98" Civilite="M" Nom="DUQUESNAY">
+		<Contact tel="0142680543" mail="" />
+	</Client>
+	<Client Id="99" Civilite="M" Nom="CHANTEPIE">
+		<Contact tel="0143461603" mail="amoebius@free.fr" />
+	</Client>
+	<Client Id="100" Civilite="M" Nom="DELPIERRE">
+		<Contact tel="0147660010" mail="maurice.henriet@yahoo.fr" />
+	</Client>
+	<Client Id="102" Civilite="M" Nom="henriet">
+		<Contact tel="" mail="" />
+	</Client>
+</ListedeClients>
